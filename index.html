@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Créer Compte</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link
+	href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&amp;display=swap"
+	rel="stylesheet"
+	/>
+	<link
+	rel="stylesheet"
+	href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
+	/>
+	<link href="style.css" rel="stylesheet" />
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<main>
+		<h1>Nouveau Compte</h1>
+		<form>
+			<div class="input-group">
+				<label for="username">Nom d'utilisateur</label>
+				<input id="username" name="username" />
+				<div class="requirement">At least a length of 4 alphanumeric charaters; Cannot have special charaters except underscore or dash -_</div>
+				<div id="error-username" class="display-error"></div>
+			</div>
+			<div class="input-group">
+				<label for="password">Mot de passe</label>
+				<input id="password" name="password" type="password" />
+				<div class="requirement">At least: length of 8 charaters, 1 numeric, 1 special character</div>
+				<div class="checkbox-group">
+					<input
+					id="toggle-password-visibility"
+					name="toggle-password-visibility"
+					type="checkbox"
+					/>
+					<label for="toggle-password-visibility">
+						montrer le mot de passe
+					</label>
+				</div>
+				<div id="error-password" class="display-error"></div>
+			</div>
+			<button type="submit" id="submit">Créer Compte</button>
+		</form>
+	</main>
+	<script src="main.js"></script>
+</body>
+</html>
